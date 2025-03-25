@@ -12,13 +12,7 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    },
+    origin:  "https://frontend-k1j5.onrender.com",
     methods: "GET, POST, PUT, DELETE",
     credentials: true, // Allow cookies and authentication headers
 }));
